@@ -1,0 +1,12 @@
+node_modules
+
+dist
+dist-str
+
+.vscode/*
+!.vscode/extensions.json
+
+.env
+
+migrations/*
+
