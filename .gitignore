@@ -3,9 +3,9 @@ node_modules
 dist
 dist-str
 
-.vscode/*
+.vscode/
 
 .env
 
-migrations/.*
+migrations/*.
 
