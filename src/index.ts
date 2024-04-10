@@ -8,10 +8,8 @@ AppDataSource.initialize()
     const app = express();
     app.use(express.json());
 
-    const PORT = process.env.PORT || 3000;
-
     app.use(books);
 
-    app.listen(PORT);
+    app.listen(process.env.PORT);
   })
   .catch((error) => console.log(error));
