@@ -87,6 +87,7 @@ export class BookController {
         res.status(404).json({ message: "Livro não localizado" });
       } else {
         await BookRepository.remove(book);
+        res.status(200).json({ message: "Livro excluído com sucesso!" });
       }
     } catch (error) {
       res.status(500).json({ message: "Internal Server Error" });

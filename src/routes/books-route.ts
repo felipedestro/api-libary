@@ -9,6 +9,6 @@ books.get("/livros", BookController.getAll);
 
 books.get("/livros/:_id", BookController.getById);
 
-books.put("/livros", BookController.update);
+books.put("/livros/:_id", BookController.update);
 
-books.delete("/livros", BookController.remove);
+books.delete("/livros/:_id", BookController.remove);
