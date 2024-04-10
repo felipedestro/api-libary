@@ -34,7 +34,11 @@ export class BookController {
   static async getAll(req: Request, res: Response) {
     try {
       const books = await BookRepository.find();
-      res.status(200).json(books);
+      if (books.length == 0) {
+        res.status(200).json({ message: "Ainda não livros cadastrado!" });
+      } else {
+        res.status(200).json(books);
+      }
     } catch (error) {
       console.log(error);
       res.status(500).json({ message: "Internal Server Error" });
