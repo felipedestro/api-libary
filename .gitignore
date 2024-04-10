@@ -1,13 +1,4 @@
 node_modules
-
-dist
-dist-str
-
-.vscode/
-
 .env
-
-migrations/*.ts
-
 .vercel
 .env*.local
