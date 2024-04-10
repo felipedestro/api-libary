@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec ts-node ./src/index.ts",
-    "build": "rm -f ./dist && tsc",
-    "start": "node ./dist/index.js",
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist",
+    "start": "nodemon ./dist/index.js",
     "migration:generate": "typeorm-ts-node-commonjs -d ./src/data-source migration:generate ./src/migrations/default",
     "migration:run": "typeorm-ts-node-commonjs -d ./src/data-source migration:run"
   },
@@ -18,7 +20,9 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "pg": "^8.11.5",
+    "pre-commit": "^1.2.2",
     "reflect-metadata": "^0.2.2",
+    "rimraf": "^5.0.5",
     "typeorm": "^0.3.20",
     "yarn": "^1.22.22"
   },
@@ -28,5 +32,10 @@
     "nodemon": "^3.0.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.3.2"
-  }
+  },
+  "pre-commit": [
+    "ts.check",
+    "build",
+    "add-build"
+  ]
 }
