@@ -10,8 +10,6 @@ AppDataSource.initialize()
 
     app.use(books);
 
-    app.listen(process.env.PORT, () => {
-      console.log(process.env.PORT);
-    });
+    app.listen(process.env.PORT);
   })
   .catch((error) => console.log(error));

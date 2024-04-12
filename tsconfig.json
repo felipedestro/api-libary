@@ -4,15 +4,17 @@
     "module": "commonjs",
     "sourceMap": true,
     "outDir": "dist",
+    "rootDir": "./src",
+    "strict": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "noImplicitAny": true,
     "strictPropertyInitialization": false,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/*", "src/types"]
+    }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"],
-  "ts-node": {
-    "files": true
-  }
+  "include": ["src/**/*"]
 }
