@@ -7,7 +7,7 @@ var typeorm_1 = require("typeorm");
 exports.AppDataSource = new typeorm_1.DataSource({
     type: "postgres",
     url: process.env.DATABASE_URL,
-    entities: ["".concat(__dirname, "/**/entities/*.{ts, js}")],
-    migrations: ["".concat(__dirname, "/**/migrations/*.{ts, js}")],
+    entities: ["".concat(__dirname, "/../**/entities/*.{ts, js}")],
+    migrations: ["".concat(__dirname, "/../**/migrations/*.{ts, js}")],
 });
 //# sourceMappingURL=data-source.js.map
