@@ -13,11 +13,11 @@
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "Node",
-    "baseUrl": ".",
+    "baseUrl": "../",
     "paths": {
-      "src/*": ["src/*"],
-      "entities": ["src/entities/*"],
-      "*": ["node_modules/*", "src/types"]
+      "src/*": ["../src/*"],
+      "entities": ["../src/entities/*"],
+      "*": ["node_modules/*", "../src/types"]
     }
   },
   "include": ["src/**/*"],
